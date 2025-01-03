@@ -1,0 +1,30 @@
+vnpt_jira:
+  outputs:
+
+    dev:
+      type: trino
+      method: ldap # optional, one of {none | ldap | kerberos}
+      user: "{{env_var('TRINO_JIRA_NEW_USERNAME')}}"
+      password: "{{env_var('TRINO_JIRA_NEW_PASSWORD')}}"
+      database: jira_new
+      host: 25d150f0-b6e9-4660-b1a5-4996b4149019.vnptoss.com
+      port: 443
+      schema: data360
+      threads: 1
+      protocol: https
+      verify: true
+
+    prod:
+      type: trino
+      method: ldap # optional, one of {none | ldap | kerberos}
+      user: "{{env_var('TRINO_JIRA_NEW_USERNAME')}}"
+      password: "{{env_var('TRINO_JIRA_NEW_PASSWORD')}}"
+      database: jira_new
+      host: 25d150f0-b6e9-4660-b1a5-4996b4149019.vnptoss.com
+      port: 443
+      schema: data360
+      threads: 1
+      protocol: https
+      verify: true
+
+  target: dev

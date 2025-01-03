@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: "data360"  # Replace with the database name
+    description: "Source database containing Jira staging table"
+    tables:
+      - name: stg_jira
+        description: "Source table for Jira staging data"
+      - name: jira
+        description: "Source table for Jira data"
+# models:
+#   - name: stg_jira
+#     description: "Staging view for Jira data"
+#     config:
+#       materialized: view

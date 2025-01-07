@@ -10,7 +10,7 @@ FROM {{ref('jira')}} #}
 -- The test passes if there is at least one row with a created_date of today or yesterday.
 SELECT *
 FROM {{ source("data360", "stg_jira")}}
-WHERE (
+WHERE NOT (
     SELECT MAX(created_date)
     FROM {{ source("data360", "stg_jira")}}
 ) > date_add('day', -1, current_date)

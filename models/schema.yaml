@@ -8,6 +8,7 @@ sources:
         description: "Source table for Jira staging data"
       - name: jira
         description: "Source table for Jira data"
+    
 # models:
 #   - name: stg_jira
 #     description: "Staging view for Jira data"
